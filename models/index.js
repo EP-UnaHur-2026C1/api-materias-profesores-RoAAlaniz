@@ -1,3 +1,7 @@
+/*
+Este archivo es el encargado de configurar Sequelize y cargar automáticamente todos los modelos
+ de la aplicación.
+*/
 'use strict';
 
 const fs = require('fs');
@@ -8,6 +12,7 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
+const {profesor} = require("../models")
 
 let sequelize;
 if (config.use_env_variable) {
